@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Decentralized Ecommerce Store</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <img src="../imgs/heima.jpg" width="200px" height="40px">
+        <a href="index.html" class="btn btn-primary">主页</a>
+        </br>
+        <h1 class="text-center">产品详情</h1>
+        <div class="container">
+            <div class="row" id="product-details">
+                <div style="display: none;" class="alert alert-success" id="msg"></div>
+                <div style="display: none;" class="alert alert-success" id="msg2"></div>
+                <div class="col-sm-12">
+                    <div class="col-sm-4">
+                        <div id="product-image"></div>
+                        <div id="product-name"></div>
+                        <div id="product-auction-end"></div>
+                    </div>
+                    <div class="col-sm-8">
+                        <h3>起始价格:
+                            <span id="product-price"></span>
+                        </h3>
+                        <form id="bidding" class="col-sm-4">
+                            <h4>你的竞标信息:</h4>
+                            <div class="form-group">
+                                <label for="bid-amount">竞价金额</label>
+                                <input type="text" class="form-control" name="bid-amount" id="bid-amount" placeholder="需大于起始价格" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="bid-send-amount">发送金额</label>
+                                <input type="text" class="form-control" name="bid-send-amount" id="bid-send-amount" placeholder="需大于竞标价格" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="secret-text">密文</label>
+                                <input type="text" class="form-control" name="secret-text" id="secret-text" placeholder="随机数，请记住" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="user-number">编号</label>
+                                <input type="text" class="form-control" name="user-number" id="user-number" placeholder="1..2...3.." required="required">
+                            </div>
+
+                            <input type="hidden" name="product-id" id="product-id" />
+                            <button type="submit" class="btn btn-primary">提交</button>
+                        </form>
+                        <form id="revealing" class="col-sm-4">
+                            <h4>揭标</h4>
+                            <div class="form-group">
+                                <label for="actual-amount">竞价金额</label>
+                                <input type="text" class="form-control" name="actual-amount" id="actual-amount" placeholder="Amount > Start Price" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="reveal-secret-text">密文</label>
+                                <input type="text" class="form-control" name="reveal-secret-text" id="reveal-secret-text" placeholder="Any random text" required="required">
+                            </div>
+                            <div class="form-group">
+                                <label for="reveal-user-number">编号</label>
+                                <input type="text" class="form-control" name="reveal-user-number" id="reveal-user-number" placeholder="1..2...3.." required="required">
+                            </div>
+                            <input type="hidden" name="product-id" id="product-id" />
+                            <button type="submit" class="btn btn-primary">揭标</button>
+                        </form>
+                    </div>
+                </div>
+                <div id="product-desc" class="col-sm-12">
+                    <h2>产品描述</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Decentralized Ecommerce Store</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <img src="../imgs/heima.jpg" width="200px" height="40px">
+        <a href="index.html" class="btn btn-primary">首页</a>
+        </br>
+        <h1>添加新项目</h1>
+        <div class="container">
+            <div class="row">
+                <div style="display: none;" class="alert alert-success" id="msg"></div>
+                <form class="form-horizontal col-sm-5" id="add-item-to-store">
+                    <div class="form-group">
+                        <label for="product-name" class="col-sm-2 control-label">名字</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="product-name" class="form-control" id="product-name" placeholder="手机，服装，配饰等" required="required"></input>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-description" class="col-sm-2 control-label">描述</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" name="product-description" rows="6" id="product-description" placeholder="描述信息"
+                                required="required"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-image" class="col-sm-2 control-label">上传图片</label>
+                        <div class="col-sm-10">
+                            <input type="file" name="product-image" class="form-control" id="product-image" required="required">
+                        </div>
+                    </div>
+                    <div class="form-group" hidden>
+                        <label for="product-category" class="col-sm-2 control-label">类别</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="product-category" id="product-category">
+                                <option>Art</option>
+                                <option>Books</option>
+                                <option>Cameras</option>
+                                <option>Cell Phones & Accessories</option>
+                                <option>Clothing</option>
+                                <option>Coins & Paper Money</option>
+                                <option>Collectibles</option>
+                                <option>Computers/Tablets & Networking</option>
+                                <option>Consumer Electronics</option>
+                                <option>Crafts</option>
+                                <option>DVDs & Movies</option>
+                                <option>Entertainment Memorabilia</option>
+                                <option>Gift Cards & Coupons</option>
+                                <option>Music</option>
+                                <option>Musical Instruments & Gear</option>
+                                <option>Pet Supplies</option>
+                                <option>Pottery & Glass</option>
+                                <option>Sporting Goods</option>
+                                <option>Stamps</option>
+                                <option>Tickets</option>
+                                <option>Toys & Hobbies</option>
+                                <option>Video Games</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price" class="col-sm-2 control-label">起始价格</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="product-price" id="product-price" required="required"></input>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-condition" class="col-sm-2 control-label">状态</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="product-condition" id="product-condition">
+                                <option value="1">全新</option>
+                                <option value="2">二手</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price" class="col-sm-2 control-label">竞价起始时间</label>
+                        <div class="col-sm-10">
+                            <input type="datetime-local" class="form-control" name="product-auction-start" id="product-auction-start" required="required"></input>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-price" class="col-sm-2 control-label">距离开始竞价时间</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="product-auction-end" id="product-auction-end">
+                                <option>1</option>
+                                <option>3</option>
+                                <option>5</option>
+                                <option>7</option>
+                                <option>10</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">提交</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
